@@ -6,11 +6,13 @@ LABEL maintainer="Rodrigo Cavalcante <rodrigoibka@gmail.com>"
 ENV NODE_ENV=production
 
 COPY ./driver/geckodriver /usr/bin/geckodriver
-COPY ./package.json /usr/src/app
+COPY ./app /usr/src/app/
 
-WORKDIR /usr/src/app
 
-RUN npm install -g selenium-webdriver --python=python3.6 pip mongodb
+WORKDIR /usr/src/app/
+
+RUN npm install -g 
 RUN apt-get update && apt-get install -y python-pip vim python3-pip
 
+ENTRYPOINT ["node, app.js"]
 EXPOSE 8080

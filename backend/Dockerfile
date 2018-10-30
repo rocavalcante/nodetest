@@ -11,8 +11,8 @@ COPY ./app /usr/src/app/
 
 WORKDIR /usr/src/app/
 
-RUN npm install -g 
+RUN npm install -g
 RUN apt-get update && apt-get install -y python-pip vim python3-pip
 
-ENTRYPOINT ["node, app.js"]
+#CMD [ "node app.js" ]
 EXPOSE 8080

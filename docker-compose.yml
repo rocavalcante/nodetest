@@ -2,6 +2,7 @@ version: '3.3'
 
 services:
   backend:
+    image: arsenal:1
     build: ./backend
     volumes:
       - ./backend:/app

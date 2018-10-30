@@ -7,13 +7,13 @@ node {
         checkout scm
     }
 
-    stage('Build image') {
+    stage('Build image Arsenal') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("frontend .")
-        base = docker.build("backend .")
-        data = docker.build("database .")
+        app = docker.build("nodetest/frontend")
+        //base = docker.build("backend .")
+        //data = docker.build("database .")
     }
 
     stage('Test image') {

@@ -1,1 +1,25 @@
 #compose to build all
+version: '3.7'
+
+services:
+  ars_database:
+    build: ./database
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ../database:/data
+  ars_backend:
+    build: ./backend
+    image: backend
+    ports:
+      - "9090:8080"
+    volumes:
+      - ../backend:/data
+  ars_frontend:
+    build: ./frontend
+    image: frontend
+    ports:
+      - "8282:8080"
+    volumes:
+      - ../frontend:/data

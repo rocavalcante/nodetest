@@ -11,9 +11,9 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("nodetest/frontend")
-        base = docker.build("nodetest/backend")
-        data = docker.build("nodetest/database")
+        #app = docker.build("nodetest/frontend")
+        app = docker.build("nodetest/backend")
+        #data = docker.build("nodetest/database")
     }
 
     stage('Test image') {

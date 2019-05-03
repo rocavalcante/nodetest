@@ -5,7 +5,6 @@ LABEL maintainer="Rodrigo Cavalcante <rodrigoibka@gmail.com>"
 
 ENV NODE_ENV=production
 
-COPY ./driver/geckodriver /usr/bin/geckodriver
 COPY ./app /usr/src/app/
 
 

@@ -2,9 +2,6 @@ version: '3.3'
 
 services:
   backend:
-    image: arsenal:1
+    image: spock:1
     build: ./backend
-    volumes:
-      - ./backend:/app
-    ports:
-      - 8081:8080
+   

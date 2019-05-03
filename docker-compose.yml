@@ -4,4 +4,3 @@ services:
   backend:
     image: spock:1
     build: ./backend
-   
